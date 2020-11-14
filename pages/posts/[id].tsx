@@ -4,7 +4,15 @@ import Head from "next/head";
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 
-export default function Post({ postData }) {
+export declare type PostComponent =  {
+  postData: {
+    title: string
+    date: string
+    contentHtml: string
+  }
+}
+
+export default function Post({ postData }: PostComponent) {
   return (
     <Layout>
       <Head>
